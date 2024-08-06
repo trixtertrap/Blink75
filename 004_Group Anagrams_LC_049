@@ -1,5 +1,8 @@
 def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        # Initialize a defaultdict with lists as the default value type
         res = defaultdict(list)
+        # Iterating over each string in the input list
         for i in strs:
-            res[str(sorted(i))].append(i)
+                # Append the original string to the list corresponding to the sorted key
+                res[str(sorted(i))].append(i)
         return res.values()
